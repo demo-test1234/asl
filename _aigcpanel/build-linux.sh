@@ -47,6 +47,7 @@ VERSION=$(python -m _aigcpanel.build)
 VERSION_ARCH=$(echo $VERSION | awk -F '-' '{print $1"-"$2}')
 echo "VERSION: ${VERSION}"
 echo "VERSION_ARCH: ${VERSION_ARCH}"
+mkdir -p binary
 curl -o launcher "https://modstart-lib-public.oss-cn-shanghai.aliyuncs.com/aigcpanel-server-launcher/launcher-${VERSION_ARCH}"
 chmod +x launcher
 curl -o binary/ffmpeg "https://modstart-lib-public.oss-cn-shanghai.aliyuncs.com/ffmpeg/ffmpeg-${VERSION_ARCH}"
